@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     public void reset(android.view.View view) {
         count = 0;
         textView.setText(String.valueOf(count));
-        changes.add(fmt.format(Calendar.getInstance().getTime()));
+        changes.add(fmt.format(Calendar.getInstance().getTime()) + ": reset the counter");
         adapter.notifyDataSetChanged();
 
     }
@@ -54,14 +54,14 @@ public class MainActivity extends AppCompatActivity {
     public void increaseByOne(android.view.View view) {
         count++;
         textView.setText(String.valueOf(count));
-        changes.add((fmt.format(Calendar.getInstance().getTime())));
+        changes.add(fmt.format(Calendar.getInstance().getTime()) + ": increased the counter by 1");
         adapter.notifyDataSetChanged();
     }
 
     public void decreaseByOne(android.view.View view) {
         count--;
         textView.setText(String.valueOf(count));
-        changes.add(fmt.format(Calendar.getInstance().getTime()));
+        changes.add(fmt.format(Calendar.getInstance().getTime()) + ": decreased the counter by 1");
         adapter.notifyDataSetChanged();
     }
 
